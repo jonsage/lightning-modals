@@ -22,6 +22,8 @@
         );
     },
     onRender : function(cmp) {
-        //$A.util.addClass(cmp.find("spinner"), "slds-hide");
+        setTimeout(function(){
+            $A.util.addClass(cmp.find("spinner"), "slds-hide");
+        }, 3000);
     }
 })
