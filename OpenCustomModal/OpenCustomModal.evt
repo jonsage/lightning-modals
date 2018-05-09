@@ -1,0 +1,13 @@
+<aura:event type="APPLICATION" description="Event template">
+    <aura:attribute name="size" type="String" default=""/>
+    <aura:attribute name="title" type="String" required="true"/>
+    <aura:attribute name="tagline" type="String"/>
+    <aura:attribute name="body" type="String" description="Component name" required="true"/>
+    <aura:attribute name="bodyClass" type="String" default=""/>
+    <aura:attribute name="bodyParams" type="Map" default="{}"/>
+    <aura:attribute name="footer" type="String" description="Component name" required="true" default="s2cor:customModalDialogFooterStandard"/>
+    <aura:attribute name="footerClass" type="String" default=""/>
+    <aura:attribute name="footerParams" type="Map" default="{}"/>
+    <aura:attribute name="isFixedHeight" type="Boolean" default="false"/>
+    <aura:attribute name="class" type="String" default=""/>
+</aura:event>

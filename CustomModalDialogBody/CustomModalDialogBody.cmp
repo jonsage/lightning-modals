@@ -1,0 +1,14 @@
+<aura:component >
+    <aura:attribute name="class" type="String"/>
+    <aura:attribute name="component" type="String"/>
+    <aura:attribute name="params" type="Map"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="render" value="{!this}" action="{!c.onRender}"/>
+    
+	<div class="{!'sage-reverse-p-around-medium ' + v.class}">
+    	{!v.body}
+    </div>
+    
+    <lightning:spinner aura:id="spinner" size="large" class="sage-modal__spinner" />
+</aura:component>

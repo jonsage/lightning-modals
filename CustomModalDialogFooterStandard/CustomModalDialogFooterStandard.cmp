@@ -1,0 +1,5 @@
+<aura:component >
+    <lightning:button class="sage-align-start" variant="neutral" label="Cancel" onclick="{! c.handleCancel }" />
+    <lightning:button variant="neutral" label="Secondary" onclick="{! c.handleSecondary }" />
+    <lightning:button variant="brand" label="Primary" onclick="{! c.handlePrimary }" />
+</aura:component>

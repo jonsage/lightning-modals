@@ -1,0 +1,12 @@
+<aura:component >
+    <aura:attribute name="progressIndicator" type="Aura.Component"/>
+    <aura:attribute name="progressStep" type="Integer" default="1"/>
+    <aura:attribute name="progressError" type="Boolean" default="false"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <lightning:button variant="neutral" label="Back" onclick="{! c.handleBack }"/>
+    
+    {!v.progressIndicator}
+    
+    <lightning:button variant="brand" label="Next" onclick="{! c.handleNext }"/>
+</aura:component>

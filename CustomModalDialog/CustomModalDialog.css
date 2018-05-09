@@ -1,0 +1,53 @@
+/* PREP FOR MODAL CUSTOMISATION */
+.THIS.slds-modal {
+    flex-direction:column;
+    align-items:center;
+    display:flex;
+}
+
+.THIS.slds-modal > .slds-modal__container {
+    margin-bottom:auto;
+    margin-top:auto;
+	max-height:100%;
+    height:auto;
+}
+
+.THIS.slds-modal > .slds-modal__container > .slds-modal__content {
+    flex-direction:column;
+    display:flex;
+    padding:0 !important;
+}
+
+.THIS.slds-modal .sage-modal__spinner {
+    border-radius:.25rem;
+    margin:3rem 0;
+}
+
+/* FIXED HEIGHT MODALS */
+.THIS.sage-modal_fixed-height .slds-modal__container,
+.THIS.sage-modal_fixed-height .slds-modal__content {
+    flex-grow:1;
+}
+
+/* 450px in REM is (450 / 16) = 28.125rem */
+/* Close button is 2rem + 0.5rem top and bottom spacing = 3rem */
+/* 28.125rem + (2 * 3rem) = 34.125rem */
+.THIS.sage-modal_fixed-height {
+    padding: calc(50vh - (34.125rem / 2)) 0;
+}
+
+/* 640px in REM is (640 / 16) = 40rem */
+/* Close button is 2rem + 0.5rem top and bottom spacing = 3rem */
+/* 40rem + (2 * 3rem) = 46rem */
+.THIS.sage-modal_fixed-height.slds-modal_medium,
+.THIS.sage-modal_fixed-height.uiModal--medium {
+    padding: calc(50vh - (46rem / 2)) 0;
+}
+
+/* 700px in REM is (700 / 16) = 43.75rem */
+/* Close button is 2rem + 0.5rem top and bottom = 3rem */
+/* 43.75rem + (2 * 3rem) = 49.75rem */
+.THIS.sage-modal_fixed-height.slds-modal_large,
+.THIS.sage-modal_fixed-height.uiModal--large {
+    padding: calc(50vh - (49.75rem / 2)) 0;
+}
