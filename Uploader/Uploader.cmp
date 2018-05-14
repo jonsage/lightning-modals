@@ -1,0 +1,32 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    
+	<aura:attribute name="recordId" type="Id" default="0057E000004TVzIQAW" />
+    <aura:attribute name="message" type="String" default="You can drag your file here" />
+    <aura:attribute name="label" type="String" default="Choose a file on your computer" />
+    <aura:attribute name="fileicon" type="String" default="excel" />
+    <aura:attribute name="extensions" type="String[]" default="['.xls','.xlsx']" />
+    <aura:attribute name="filesize" type="Integer" default="10485760" />
+    
+    <aura:attribute name="default" type="String" access="private" />
+    <aura:attribute name="progress" type="String" access="private" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	
+    <div>
+        <p>
+            <lightning:icon aura:id="fileIcon" iconName="{!'doctype:' + v.fileicon}" size="large" class="file-icon" />
+        </p>
+        
+        <p class="slds-m-top_x-large">{!v.message}</p>
+        
+        <p class="upload slds-m-top_x-large">
+            <lightning:progressBar class="upload-bar" variant="circular" size="large" value="{!v.progress}"/>
+            
+            <label class="upload-button slds-button slds-button_brand">
+                {!v.label}
+                <input aura:id="fileInput" type="file" name="file" accept="{!v.extensions}" class="slds-hide" onchange="{!c.onFilesChange}" />
+            </label>
+        </p>
+    </div>
+    
+</aura:component>

@@ -1,0 +1,69 @@
+.THIS {
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+    display:flex;
+    
+    background:white;
+    padding:1rem;
+}
+
+.THIS .file-icon {
+    transform: translate3d(0,0,0);
+    transition:opacity 150ms;
+    opacity:0.35;
+}
+
+.THIS.chosen .file-icon {
+    opacity:1;
+}
+
+.THIS.invalid .file-icon {
+    animation:sage-anim-shake 500ms linear;
+    transition:opacity 250ms 400ms;
+    opacity:0.35;
+}
+
+.THIS .upload {
+    position:relative;
+}
+
+.THIS .upload-bar {
+    transform:translateY(-50%);
+    position:absolute;
+    top:50%;
+    right:0;
+    left:0;
+}
+
+.THIS .upload-button {
+    transition:opacity 150ms 1ms, z-index 1ms;
+    position:relative;
+}
+
+.THIS.is-uploading .upload-button {
+    transition:opacity 150ms, z-index 1ms 150ms;
+    z-index:-1;
+    opacity:0;
+}
+
+@keyframes sage-anim-shake {
+  8%,
+  41% {
+    transform: translate3d(-10px,0,0);
+  }
+  25%,
+  58% {
+    transform: translate3d(10px,0,0);
+  }
+  75% {
+    transform: translate3d(-5px,0,0);
+  }
+  92% {
+    transform: translate3d(5px,0,0);
+  }
+  0%,
+  100% {
+    transform: translate3d(0,0,0);
+  }
+}
